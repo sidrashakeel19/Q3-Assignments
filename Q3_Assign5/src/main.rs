@@ -12,8 +12,7 @@ async fn get_addnumber(l: web::Path<(u32,)>) -> impl Responder {
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-        .service(get_add
-            number)
+        .service(get_addnumber)
     })
     .bind("127.0.0.1:8080")?
     .run()
